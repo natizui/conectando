@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-import Template1 from './components/template1/template1.js'
+import Template1 from './components/template1/Template1.js'
 
 
 class App extends Component {
