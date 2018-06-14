@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './template1.css';
+import '../../Template1.css';
+import '../../../btn.css';
 
 let fullName = 'Jane Doe'
 class Name1 extends Component {
@@ -39,8 +40,8 @@ class Name1 extends Component {
                 {(!this.state.editing) && (<h1 onClick={this.changeEditState}> { fullName } </h1>)}
                 {(this.state.editing) && 
                     (<div>
-                        <input type="text" name="name" value={this.state.value} onChange={this.handleNameChange} placeholder="Nome Completo"/>
-                        <button onClick={this.changeNameComplete}>OK</button>
+                        <input type="text" name="name" maxLength="23" value={this.state.value} onChange={this.handleNameChange} placeholder="Nome Completo"/>
+                        <button className="btn" onClick={this.changeNameComplete}>OK</button>
                     </div>) 
                     }
             </div>
