@@ -29,7 +29,10 @@ class JobTitle1 extends Component {
     changeTitleComplete = e => {
         this.setState({
             editing: false
-        })
+        });
+        if(jobTitle.trim() === '') {
+            jobTitle = 'desenvolvedora frot-end';
+        }
     }
     
     
@@ -40,7 +43,7 @@ class JobTitle1 extends Component {
                 {(this.state.editing) && 
                     (<div>
                         <input type="text" title="title" value={this.state.value} onChange={this.handleTitleChange} placeholder="Profissão"/>
-                        <button onClick={this.changeTitleComplete}>OK</button>
+                        <button className="btn" onClick={this.changeTitleComplete}>OK</button>
                     </div>) 
                     }
             </div>

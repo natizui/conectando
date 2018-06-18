@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import '../../Template1.css';
-import '../../../btn.css';
+import '../../../../Template1.css';
+import '../../../../../btn.css';
 
-let fullName = 'Jane Doe'
-class Name1 extends Component {
+let email = 'janedoe@email.com.br'
+class Email extends Component {
     constructor(props) {
         super(props)
         
         this.state = {
             editing: false,
-            name: {
+            emailAdress: {
                 value: this.props.value,
                 error: ''
             },
@@ -20,19 +20,19 @@ class Name1 extends Component {
     changeEditState = e => {
         this.setState({
             editing: true
-        })
+        });
     }
     
     handleNameChange = e => {
-        fullName = e.target.value
+        email = e.target.value
     }
 
     changeNameComplete = e => {
         this.setState({
             editing: false
         });
-        if(fullName.trim() === '') {
-            fullName = 'Jane Doe'
+        if(email.trim() === '') {
+            email = 'Jane Doe'
         }
     }
     
@@ -40,10 +40,10 @@ class Name1 extends Component {
     render() {
         return (
             <div className="viramaozinha">
-                {(!this.state.editing) && (<h1 onClick={this.changeEditState}> { fullName } </h1>)}
+                {(!this.state.editing) && (<p onClick={this.changeEditState}> { email } </p>)}
                 {(this.state.editing) && 
                     (<div>
-                        <input type="text" name="name" maxLength="23" value={this.state.value} onChange={this.handleNameChange} placeholder="Nome Completo"/>
+                        <input type="email" name="emailAdress" value={this.state.value} onChange={this.handleNameChange} placeholder="Nome Completo"/>
                         <button className="btn" onClick={this.changeNameComplete}>OK</button>
                     </div>) 
                     }
@@ -54,4 +54,4 @@ class Name1 extends Component {
 
 
 
-export default Name1;
+export default Email;

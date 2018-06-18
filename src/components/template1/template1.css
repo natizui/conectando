@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+.viramaozinha:hover {
+    cursor: pointer;
+}
+
 h1 {font-size: 32px}
 h2 {
     font-size: 18px;
