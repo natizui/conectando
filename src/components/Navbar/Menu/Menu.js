@@ -54,7 +54,7 @@ class Menu extends React.Component {
                 </a>
 
                 <ul className={classesDasOpcoes}>
-                    <li>
+                    {/* <li>
                         <NavLink 
                             to="/quem-somos" 
                             activeClassName="navbar-menu__opcoes--ativo"
@@ -62,7 +62,7 @@ class Menu extends React.Component {
                         >
                             Quem somos
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink 
                             to="/contato" 

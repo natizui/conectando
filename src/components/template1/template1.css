@@ -28,11 +28,11 @@ h5 {
 p {font-size: 12px}
 li {font-size: 12px}
 
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;    
-}
+} */
 
 .template1__geral {
     display: flex;

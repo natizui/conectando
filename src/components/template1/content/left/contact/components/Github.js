@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../../../Template1.css';
 import '../../../../../btn.css';
 
-let adress = 'linkedin.com/in/janedoe'
+let adress = 'github.com/janedoe'
 class Github extends Component {
     constructor(props) {
         super(props)
