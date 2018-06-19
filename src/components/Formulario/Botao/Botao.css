@@ -1,17 +1,26 @@
 .botao {
-    color: white;
+    color: rgba(236, 254, 232, 1);
     font-size: 1.3rem;
     font-weight: bold;
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
-    background: #9351b4;
-    border: 1px solid #9351b4;
+    background: rgba(65, 51, 122, 1);
+    border: 1px solid rgba(51, 30, 54, 1);
     border-radius: 5px;
 }
 
+.botao:hover {
+    border: 0px;
+    color: rgba(51, 30, 54, 1);
+}
+
 .botao--desabilitado {
-    color: gray;
-    background: lightgrey;
-    border-color: lightgrey;
+    color: rgba(51, 30, 54, 1); 
+    background:  rgba(236, 254, 232, 1);
+    border-color:  rgba(194, 239, 235, 1);
+}
+
+.botao--desabilitado:hover {
+    color: rgba(194, 239, 235, 1);
 }
