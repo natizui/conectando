@@ -1,21 +1,18 @@
 import React from 'react';
+import { Icon } from 'react-icons-kit'
+import {plus} from 'react-icons-kit/typicons/plus'
+
+import ListItem from './ListItem.js'
 
 import '../../../Template1.css';
 
 
 
-// deleteItem = () => {
-    
-// }
 
-const ListItem = ({ value, onClick }) => (
-    <li className="viramaozinha" > <p>{value}</p> <button>x</button> </li>
-);
-  
-const List = ({ items, onItemClick }) => (
-    <ul onClick={this.onClick}>
+const List = ({ items }) => (
+    <ul>
         {
-        items.map((item, i) => <ListItem key={i} value={item} onClick={onItemClick} />)
+        items.map((item, i) => <ListItem key={i} id={i} value={item}  />)
         }
     </ul>
 );
@@ -24,9 +21,9 @@ const List = ({ items, onItemClick }) => (
 class Skills extends React.Component {
     constructor(props) {
         super(props)
-
+    
         this.state = {
-            editing: false,
+            add: false,
             inputValue: '',
             skills: ['HTML', 'CSS', 'JavaScript']
         }
@@ -35,10 +32,11 @@ class Skills extends React.Component {
     onClick = () => {
         console.log('clique');
         this.setState({
-            editing: true
+            add: true
         })
-    }
-  
+      }
+
+    
     onChange = (e) => this.setState({ inputValue: e.target.value });
   
     handleItemClick = (e) => {
@@ -49,7 +47,7 @@ class Skills extends React.Component {
             this.setState({ skills: nextState, inputValue: '' });
         };
         this.setState({
-            editing: false
+            add: false
         });
     }
   
@@ -59,16 +57,14 @@ class Skills extends React.Component {
         <div class="template1__skills">
             <div class="template1__skills__content">
                 <h2>HABILIDADES</h2>
-                <ul>
-                    {(!this.state.editing) && (<List items={skills} />)}
-                    {(this.state.editing) && 
-                        (<div>
-                            <input type="text" value={inputValue} onChange={this.onChange} placeholder="Habilidade "/>
-                            <button className="btn" onClick={this.handleItemClick}>OK</button>
-                        </div>) 
-                    }
-                    
-                </ul>
+                <List items={skills} />
+                {(!this.state.add) && (<Icon onClick={this.onClick} icon={plus} />)}
+                {(this.state.add) && 
+                    (<div>
+                    <input type="text" value={inputValue} onChange={this.onChange} placeholder="Habilidade "/>
+                    <button className="btn" onClick={this.handleItemClick}>OK</button>
+                    </div>) 
+                }
             </div>
         </div>
       );

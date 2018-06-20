@@ -38,6 +38,10 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" render={props => (
+            <Template1 />
+          )} />
+
+          <Route path="/template" render={props => (
             this.state.usuario ? <Template1 /> : <Redirect to="/login" />
           )} />
 

@@ -28,6 +28,7 @@ class Name1 extends Component {
     }
 
     changeNameComplete = e => {
+        console.log(fullName)
         this.setState({
             editing: false
         });
