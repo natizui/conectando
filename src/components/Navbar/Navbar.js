@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo.png'
+import logo from './conectando.png'
 import { Link } from 'react-router-dom'
 import Menu from './Menu/Menu'
 import './Navbar.css'
