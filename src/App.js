@@ -3,10 +3,10 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 // import logo from './logo.svg';
 import './App.css';
 
-import Template1 from './components/template1/Template1.js'
 import Navbar from './components/Navbar/Navbar.js'
-import NaoEncontrada from './pages/NaoEncontrada/NaoEncontrada.js'
+import Templates from './pages/Templates/Templates.js'
 import Login from './pages/Login/Login.js'
+import NotFind from './pages/NotFind/NotFind.js'
 
 
 class App extends Component {
@@ -38,11 +38,11 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" render={props => (
-            <Template1 />
+            <Templates />
           )} />
 
-          <Route path="/template" render={props => (
-            this.state.usuario ? <Template1 /> : <Redirect to="/login" />
+          <Route path="/templates" render={props => (
+            this.state.usuario ? <Templates /> : <Redirect to="/login" />
           )} />
 
           <Route path="/login" render={props => (
@@ -52,7 +52,7 @@ class App extends Component {
             />
           )} />
           
-          <Route component={NaoEncontrada} />
+          <Route component={NotFind} />
         </Switch>
       </div>
     );
