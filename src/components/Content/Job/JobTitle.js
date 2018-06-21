@@ -39,7 +39,7 @@ class JobTitle extends Component {
     render() {
         return (
             <div>
-                {(!this.state.editing) && (<h3 onClick={this.changeEditState}> { jobTitle } </h3>)}
+                {(!this.state.editing) && (<h3 className="viramaozinha" onClick={this.changeEditState}> { jobTitle } </h3>)}
                 {(this.state.editing) && 
                     (<div>
                         <input type="text" title="title" value={this.state.value} onChange={this.handleTitleChange} placeholder="Profissão"/>

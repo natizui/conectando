@@ -1,48 +1,33 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-}
-
-.viramaozinha:hover {
-    cursor: pointer;
-}
-
-h1 {font-size: 32px}
+h1 {font-size: 2rem}
 h2 {
-    font-size: 18px;
+    font-size: 1.12rem;
     /* text-align: center; */
-    margin-bottom: 10px;
+    margin-bottom: 0.63rem;
 }
 h3 {
-    font-size: 14px;
+    font-size: 0.88rem;
     font-weight: normal;
 }
 h4 {
-    font-size: 12px;
-    margin-bottom: 2px;
+    font-size: 0.75rem;
+    margin-bottom: 0.13rem;
 }
 h5 {
-    font-size: 12px;
-    margin-bottom: 3px;
+    font-size: 0.7rem;
+    margin-bottom: 0.19rem;
 }
-p {font-size: 12px}
-li {font-size: 12px}
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-} */
+p {font-size: 0.7rem}
+li {font-size: 0.7rem}
 
 .template1__geral {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: calc(0.25*2480px);
-    height: calc(0.25*3508px);
-    border: 1px solid black;
-    margin: 10px;
+    width: 60vw;
+    height: calc(1.4*60vw);
+    border: 0.06rem solid black;
+    margin: 0.6rem;
 }
 
 .template1__name {
@@ -52,7 +37,7 @@ li {font-size: 12px}
     flex-direction: column;
     width: 90%;
     height: 10%;
-    border-bottom: 2px solid black;
+    border-bottom: 0.13rem solid black;
     text-transform: uppercase;
 }
 
@@ -78,16 +63,10 @@ li {font-size: 12px}
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    border-bottom: 1px solid black;
+    border-bottom: 0.06rem solid black;
     width: 90%;
     min-height: 18%;
     position: relative;
-}
-
-.template1__contact__content {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
 }
 
 .template1__education {
@@ -95,20 +74,10 @@ li {font-size: 12px}
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    border-bottom: 1px solid black;
+    border-bottom: 0.06rem solid black;
     width: 90%;
     min-height: 50%;
     position: relative;
-}
-
-.template1__education__content {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
-}
-
-.template1__education__content > div {
-    margin-bottom: 10px;
 }
 
 .template1__skills {
@@ -124,11 +93,11 @@ li {font-size: 12px}
 .template1__skills__content {
     position: absolute;
     top: 0;
-    margin-top: 10px;
+    margin-top: 0.63rem;
 }
 
 .template1__skills__content ul {
-    padding-left: 15px;
+    padding-left: 0.94rem;
 }
 
 .template1__right {
@@ -136,10 +105,10 @@ li {font-size: 12px}
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-left: 1px solid black;
+    border-left: 0.06rem solid black;
     width: 60%;
     height: 95%;
-    margin: 10px;
+    margin: 0.63rem;
 }
 
 .template1__profile {
@@ -147,20 +116,10 @@ li {font-size: 12px}
     /* justify-content: center; */
     /* align-items: center; */
     flex-direction: column;
-    border-bottom: 1px solid black;
+    border-bottom: 0.06rem solid black;
     width: 90%;
     min-height: 20%;
     position: relative;
-}
-
-.template1__profile__content {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
-}
-
-.template1__profile p {
-    text-align: justify;
 }
 
 .template1__experience {
@@ -173,16 +132,9 @@ li {font-size: 12px}
     position: relative;
 }
 
-.template1__experience__content {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
-}
 
-.template1__experience__content > div {
-    margin-bottom: 10px;
-}
 
+/*não sei onde ta isso :( */
 .template1__title-period {
     display: flex;
     justify-content: flex-start;

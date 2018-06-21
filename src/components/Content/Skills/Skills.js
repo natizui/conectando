@@ -5,7 +5,6 @@ import {plus} from 'react-icons-kit/typicons/plus'
 
 import ListItem from './ListItem.js'
 
-import '../../Templates/Template1/Template1.css';
 
 
 

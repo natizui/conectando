@@ -7,7 +7,7 @@ import Title from './Title.js'
 import Subtitle from './Subtitle.js'
 import Paragraph from './Paragraph.js'
 
-import '../../Templates/Template1/Template1.css';
+import './Experience.css';
 
 
 

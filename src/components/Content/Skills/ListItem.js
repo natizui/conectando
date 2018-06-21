@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-import '../../Templates/Template1/Template1.css';
 
 class ListItem  extends React.Component {
   constructor(props) {

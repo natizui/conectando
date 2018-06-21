@@ -14,27 +14,29 @@ import Experience from '../../Content/Experience/Experience.js'
 function Template1(props) {
   return (
     <div className="template1__geral">
-      <div class="template1__name">
+      <div className="template1__name">
         <Name />
         <JobTitle />
       </div>
-      <div class="template1__content">
-        <div class="template1__left">
-          <div class="template1__contact">
+      <div className="template1__content">
+        <div className="template1__left">
+          <div className="template1__contact">
             <Contact />
           </div>
-          <div class="template1__education">
+          <div className="template1__education">
             <Education />
           </div>
-          <div class="template1__skills">
+          <div className="template1__skills">
             <Skills />
           </div>
         </div>
-        <div class="template1__profile">
-          <Profile />
-        </div>
-        <div className="template1__experience">
-          <Experience />
+        <div className="template1__right">
+          <div className="template1__profile">
+            <Profile />
+          </div>
+          <div className="template1__experience">
+            <Experience />
+          </div>
         </div>
       </div>
     </div>

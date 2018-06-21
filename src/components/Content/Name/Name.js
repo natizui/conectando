@@ -39,8 +39,8 @@ class Name extends Component {
     
     render() {
         return (
-            <div className="viramaozinha">
-                {(!this.state.editing) && (<h1 onClick={this.changeEditState}> { fullName } </h1>)}
+            <div>
+                {(!this.state.editing) && (<h1 className="viramaozinha" onClick={this.changeEditState}> { fullName } </h1>)}
                 {(this.state.editing) && 
                     (<div>
                         <input type="text" name="name" maxLength="23" value={this.state.value} onChange={this.handleNameChange} placeholder="Nome Completo"/>
