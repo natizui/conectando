@@ -1,9 +1,11 @@
 .template1__profile__content {
     position: absolute;
     top: 0;
-    margin-top: 0.63rem;
+    /* margin-top: calc(2.9px + 0.7vw); */
 }
 
 .template1__profile p {
     text-align: justify;
+    margin-bottom: calc(2.9px + 0.7vw);
 }
+

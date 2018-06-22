@@ -1,3 +1,10 @@
+.button__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .botao {
     color: rgba(236, 254, 232, 1);
     font-size: 1.3rem;

@@ -1,9 +1,13 @@
+.menu-sandwiche {
+    color: #331E36;
+}
+
 .navbar-menu__botao {
     cursor: pointer;
     text-transform: uppercase;
     padding: 0.5rem;
-    border: 1px solid #9351b4;
-    border-radius: 5px;
+    /* border: 1px solid #9351b4;
+    border-radius: 5px; */
 }
 
 .navbar-menu__botao--aberto:after {
@@ -18,17 +22,17 @@
 
 .navbar-menu__opcoes {
     list-style: none;
-    color: white;
+    color: #ECFEE8;
     font-weight: bold;
     text-transform: uppercase;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 80vw;
+    width: 30vw;
     padding: 2rem 1rem 0;
     margin: 0;
-    background: #9351b4;
+    background: #41337A;
     transform: translateX(-100%);
     transition: transform 1s ease-in-out;
 }
@@ -38,7 +42,7 @@
 }
 
 .navbar-menu__opcoes--ativo {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid ECFEE8;
 }
 
 .navbar-menu__opcoes li + li {
@@ -47,7 +51,7 @@
 
 .navbar-menu__opcoes li a {
     cursor: pointer;
-    color: white;
+    color: #ECFEE8;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -74,7 +78,7 @@
     }
 
     .navbar-menu__opcoes--ativo {
-        border-color: #9351b4;
+        border-color: #C2EFEB;
     }
 
     .navbar-menu__opcoes li + li {
@@ -83,7 +87,7 @@
     }
 
     .navbar-menu__opcoes li a {
-        color: #9351b4;
+        color: #41337A;
         padding: 0.3rem 0;
     }
 }

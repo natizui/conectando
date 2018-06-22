@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../Templates/Template1/Template1.css';
 
-let jobTitle = 'desenvolvedora frot-end'
+let jobTitle = 'desenvolvedora full stack'
 class JobTitle extends Component {
     constructor(props) {
         super(props)
@@ -31,7 +31,7 @@ class JobTitle extends Component {
             editing: false
         });
         if(jobTitle.trim() === '') {
-            jobTitle = 'desenvolvedora frot-end';
+            jobTitle = 'desenvolvedora full stack';
         }
     }
     

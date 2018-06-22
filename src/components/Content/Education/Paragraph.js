@@ -15,7 +15,6 @@ class Paragraph  extends React.Component {
   }
 
   onClick = () => {
-    console.log('clique');
     this.setState({
       editing: true,
       backup: this.state.value

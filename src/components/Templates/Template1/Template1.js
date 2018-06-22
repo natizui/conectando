@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Template1.css'
 
 import Name from '../../Content/Name/Name.js'

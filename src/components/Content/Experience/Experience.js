@@ -16,10 +16,10 @@ const Experiences = ({ items }) => (
     <div>
         {
             items.map((item, i) => (
-                <div>
-                    <Title key={i} id={i} value={item.title}  />
-                    <Subtitle key={i} id={i} value={item.subtitle}  />
-                    <Paragraph key={i} id={i} value={item.paragraph}  /> 
+                <div key={i} id={i}>
+                    <Title value={item.title}  />
+                    <Subtitle value={item.subtitle}  />
+                    <Paragraph value={item.paragraph}  /> 
                 </div>
             ))
         }
@@ -42,14 +42,14 @@ class Experience extends React.Component {
             inputValue: this.inputValueDefault,
             education: [
                 {
-                    title: 'Ciencias da Coputação',
-                    subtitle: 'USP - 2007 a 2010',
-                    paragraph: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium eius ipsam corrupti natus'
+                    title: 'Bolsista de mestrado (atual)',
+                    subtitle: 'CAPES - Coordenação de Aperfeiçoamento de Pessoal de Nível Superior',
+                    paragraph: 'Pesquisa, abrangendo áreas como estudo do genoma, metagenomas, transcritoma e proteoma.'
                 },
                 {
-                    titulo: 'Mestrado',
-                    subtitulo: 'USP - 2011 a 2013',
-                    paragrafo: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium eius ipsam corrupti natus'
+                    titulo: 'Bolsista de Iniciação científica (2014 a 2017)',
+                    subtitulo: 'CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico',
+                    paragrafo: 'Pesquisa, abrangendo áreas como estudo do genoma, metagenomas, transcritoma e proteoma.'
                 }
             ]
         }
@@ -77,7 +77,6 @@ class Experience extends React.Component {
     }
   
     handleItemClick = (e) => {
-        console.log(e.target.innerHTML);
         const { inputValue, education } = this.state;
         if (inputValue) {
             const nextState = [...education, inputValue];
@@ -91,10 +90,14 @@ class Experience extends React.Component {
     render() {
       const { inputValue } = this.state;
       return (
-        <div class="template1__education__content">
+        <div className="template1__education__content">
             <h2>EXPERIÊNCIA</h2>
             <Experiences items={this.state.education} />
-            {(!this.state.add) && (<Icon className="viramaozinha" onClick={this.onClick} icon={plus} />)}
+            {(!this.state.add) && (
+                <div className="add-new-item viramaozinha" onClick={this.onClick}>
+                    <Icon  icon={plus} />
+                    <p>experiência</p>
+                </div>            )}
             {(this.state.add) && (
                 <div>
                     <input type="text" name="title" value={inputValue.title} placeholder="Título (período)" onChange={this.onChangeTitle} />

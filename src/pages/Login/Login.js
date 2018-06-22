@@ -45,7 +45,7 @@ class Login extends React.Component {
             
 
             this.props.onEnviarClick()
-            this.props.historico.push('/')
+            this.props.history.push('/modelo')
         }
         
     }

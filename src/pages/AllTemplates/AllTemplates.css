@@ -1,0 +1,12 @@
+.all-templates {
+    text-align: center;
+}
+
+.all-templates h1 {
+    margin: 5vh 0 2vh 0;
+    color: #331E36;
+}
+
+.all-templates p {
+    color: gray;
+}

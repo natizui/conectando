@@ -15,13 +15,16 @@ import './Education.css';
 const Educations = ({ items }) => (
     <div>
         {
-            items.map((item, i) => (
-                <div>
-                    <Title key={i} id={i} value={item.title}  />
-                    <Subtitle key={i} id={i} value={item.subtitle}  />
-                    <Paragraph key={i} id={i} value={item.paragraph}  /> 
-                </div>
-            ))
+            items.map((item, i) => {
+                
+                return (
+                    <div key={i} id={i}>
+                        <Title value={item.title}  />
+                        <Subtitle value={item.subtitle}  />
+                        <Paragraph value={item.paragraph}  /> 
+                    </div>
+                )
+            })
         }
     </div>
 );
@@ -43,14 +46,14 @@ class Education extends React.Component {
             education: [
                 {
                     title: 'Ciencias da Coputação',
-                    subtitle: 'USP - 2007 a 2010',
-                    paragraph: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium eius ipsam corrupti natus'
+                    subtitle: 'USP - 2013 a 2017',
+                    paragraph: 'Curso de bacharelado no qual estuda-se o desenvolvimento de sistemas para as múltiplas plataformas e a construção de soluções computacionais para problemas da sociedade.'
                 },
-                {
-                    titulo: 'Mestrado',
-                    subtitulo: 'USP - 2011 a 2013',
-                    paragrafo: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium eius ipsam corrupti natus'
-                }
+                // {
+                //     titulo: 'Mestrado em Bioinformática',
+                //     subtitulo: 'USP - 2018 a atual',
+                //     paragrafo: 'Curso que forma alunos para o trabalho tanto em pesquisa quanto em desenvolvimento e inovação, em situações que demandem conhecimento especializado em biologia e métodos computacionais. '
+                // }
             ]
         }
     }
@@ -91,10 +94,14 @@ class Education extends React.Component {
     render() {
       const { inputValue } = this.state;
       return (
-        <div class="template1__education__content">
+        <div className="template1__education__content">
             <h2>FORMAÇÃO</h2>
             <Educations items={this.state.education} />
-            {(!this.state.add) && (<Icon className="viramaozinha" onClick={this.onClick} icon={plus} />)}
+            {(!this.state.add) && (
+                <div className="add-new-item viramaozinha" onClick={this.onClick}>
+                    <Icon  icon={plus} />
+                    <p>formação</p>
+                </div>            )}
             {(this.state.add) && (
                 <div>
                     <input type="text" name="title" value={inputValue.title} placeholder="Curso" onChange={this.onChangeTitle} />

@@ -11,7 +11,7 @@ class Profile extends Component {
         this.state = {
             editing: false,
             inputValue: this.inputValueDefault,
-            profile: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet debitis incidunt quae aliquid voluptates tenetur enim quia, laboriosam aperiam voluptatum molestias saepe minus cupiditate reiciendis sint nulla suscipit esse!',
+            profile: 'Bacharel em Ciencias da Computação com mestrado em Bioinformática, experiência em pesquisa, abrangendo áreas como estudo do genoma, metagenomas, transcritoma e proteoma.',
             error: ''
         }
     }

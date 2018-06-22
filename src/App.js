@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
+import Favicon from 'react-favicon';
+import favicon from './favicon/favicon.png'
 // import logo from './logo.svg';
 import './App.css';
 
 import Navbar from './components/Navbar/Navbar.js'
+import AllTemplates from './pages/AllTemplates/AllTemplates.js'
 import Templates from './pages/Templates/Templates.js'
 import Login from './pages/Login/Login.js'
 import NotFind from './pages/NotFind/NotFind.js'
@@ -31,29 +35,38 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <Favicon url={favicon} />
         <Navbar 
           usuario={this.state.usuario}
           onSairClick={this.deslogaUsuario}
         />
 
         <Switch>
+
           <Route exact path="/" render={props => (
-            <Templates />
+            <AllTemplates history={props.history} />
+          )} />
+          
+          <Route path="/modelos" render={props => (
+            <AllTemplates 
+            history={props.history}
+            />
           )} />
 
-          <Route path="/templates" render={props => (
-            this.state.usuario ? <Templates /> : <Redirect to="/login" />
+          <Route path="/modelo" render={props => (
+            <Templates />
           )} />
 
           <Route path="/login" render={props => (
             <Login 
               onEnviarClick={this.logaUsuario} 
-              historico={props.history} 
+              history={props.history} 
             />
           )} />
           
           <Route component={NotFind} />
         </Switch>
+
       </div>
     );
   }

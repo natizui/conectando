@@ -3,6 +3,8 @@ import { Icon } from 'react-icons-kit'
 import {plus} from 'react-icons-kit/typicons/plus'
 // import {trash} from 'react-icons-kit/typicons/trash'
 
+import './Skills.css'
+
 import ListItem from './ListItem.js'
 
 
@@ -27,7 +29,7 @@ class Skills extends React.Component {
         this.state = {
             add: false,
             inputValue: this.inputValueDefault,
-            skills: ['HTML', 'CSS', 'JavaScript']
+            skills: ['HTML/CSS', 'JavaScript', 'Phyton', 'SQL']
         }
     }
 
@@ -58,7 +60,12 @@ class Skills extends React.Component {
         <div className="template1__skills__content">
             <h2>HABILIDADES</h2>
             <List items={skills} />
-            {(!this.state.add) && (<Icon onClick={this.onClick} icon={plus} />)}
+            {(!this.state.add) && (
+                <div className="add-new-item viramaozinha" onClick={this.onClick}>
+                    <Icon  icon={plus} />
+                    <p>habilidade</p>
+                </div>
+            )}
             {(this.state.add) && 
                 (<div>
                 <input type="text" value={inputValue} onChange={this.onChange} placeholder="Habilidade "/>

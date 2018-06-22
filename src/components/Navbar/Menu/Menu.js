@@ -1,5 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Icon } from 'react-icons-kit'
+import {thMenu} from 'react-icons-kit/typicons/thMenu'
+
 import './Menu.css'
 
 
@@ -49,11 +52,20 @@ class Menu extends React.Component {
 
         return (
             <nav className="navbar-menu">
-                <a className={classesDoBotao} onClick={this.handleAbreOuFecha}>
-                    Menu
+                <a className={classesDoBotao} onClick={this.handleAbreOuFecha} >
+                    <Icon className="menu-sandwiche" size={32} icon={thMenu} />
                 </a>
 
                 <ul className={classesDasOpcoes}>
+                    <li>
+                        <NavLink 
+                            to="/modelos" 
+                            activeClassName="navbar-menu__opcoes--ativo"
+                            onClick={this.handleOpcaoClick}        
+                        >
+                            Modelos
+                        </NavLink>
+                    </li>
                     {/* <li>
                         <NavLink 
                             to="/quem-somos" 
@@ -63,7 +75,7 @@ class Menu extends React.Component {
                             Quem somos
                         </NavLink>
                     </li> */}
-                    <li>
+                    {/* <li>
                         <NavLink 
                             to="/contato" 
                             activeClassName="navbar-menu__opcoes--ativo"
@@ -71,7 +83,7 @@ class Menu extends React.Component {
                         >
                             Contato
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink 
                             to="/login" 

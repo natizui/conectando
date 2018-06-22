@@ -1,23 +1,23 @@
-h1 {font-size: 2rem}
-h2 {
-    font-size: 1.12rem;
+.template1__geral h1 {font-size: calc(12px + 2vw)}
+.template1__geral h2 {
+    font-size: calc(8px + 1vw);
     /* text-align: center; */
-    margin-bottom: 0.63rem;
+    margin-bottom: calc(2.4px + 0.5vw);
 }
-h3 {
-    font-size: 0.88rem;
+.template1__geral h3 {
+    font-size: calc(4px + 0.9vw);
     font-weight: normal;
 }
-h4 {
-    font-size: 0.75rem;
+.template1__geral h4 {
+    font-size: calc(4px + 0.8vw);
     margin-bottom: 0.13rem;
 }
-h5 {
-    font-size: 0.7rem;
+.template1__geral h5 {
+    font-size: calc(4px + 0.8vw);
     margin-bottom: 0.19rem;
 }
-p {font-size: 0.7rem}
-li {font-size: 0.7rem}
+.template1__geral p {font-size: calc(4px + 0.8vw)}
+.template1__geral li {font-size: calc(4px + 0.8vw)}
 
 .template1__geral {
     display: flex;
@@ -93,7 +93,7 @@ li {font-size: 0.7rem}
 .template1__skills__content {
     position: absolute;
     top: 0;
-    margin-top: 0.63rem;
+    margin-top: calc(2.9px + 0.7vw);
 }
 
 .template1__skills__content ul {
@@ -108,7 +108,7 @@ li {font-size: 0.7rem}
     border-left: 0.06rem solid black;
     width: 60%;
     height: 95%;
-    margin: 0.63rem;
+    margin: calc(2.9px + 0.7vw);
 }
 
 .template1__profile {
@@ -128,10 +128,14 @@ li {font-size: 0.7rem}
     align-items: center;
     flex-direction: column;
     width: 90%;
-    height: 80%;
+    height: 75%;
     position: relative;
 }
 
+.add-new-item {
+    display: flex;
+    margin: calc(2px + 0.4vw);
+}
 
 
 /*não sei onde ta isso :( */
@@ -139,4 +143,67 @@ li {font-size: 0.7rem}
     display: flex;
     justify-content: flex-start;
     align-items: center;    
+}
+
+@media(max-width:700px){
+    .template1__geral h1 {
+        font-size: 20px;
+    }
+    .template1__geral h2{
+        font-size: 15px;
+    }
+    .template1__geral h3{
+        font-size: 8px;
+    }
+    .template1__geral h4, .template1__geral h5{
+        font-size: 8px;
+    }
+    .template1__geral p, .template1__geral li {
+        font-size: 8px;
+    }
+}
+
+@media(max-width:620px){
+    .template1__geral h4, .template1__geral h5{
+        font-size: 7px;
+    }
+    .template1__geral p, .template1__geral li {
+        font-size: 7px;
+    }
+}
+
+@media(max-width:530px){
+    .template1__geral h1 {
+        font-size: 18px;
+    }
+    .template1__geral h2{
+        font-size: 9px;
+    }
+    .template1__geral h3{
+        font-size: 7px;
+    }
+    .template1__geral h4, .template1__geral h5{
+        font-size: 6px;
+    }
+    .template1__geral p, .template1__geral li {
+        font-size: 5px;
+    }
+}
+
+@media(max-width:375px){
+    .template1__geral h1 {
+        font-size: 15px;
+    }
+    .template1__geral h2{
+        font-size: 7px;
+    }
+    .template1__geral h3{
+        font-size: 6px;
+    }
+    .template1__geral h4, .template1__geral h5{
+        font-size: 5px;
+    }
+    .template1__geral p, .template1__geral li {
+        font-size: 4px;
+    }
 }

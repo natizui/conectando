@@ -10,9 +10,11 @@ function Botao(props) {
     }
 
     return (
-        <button className={classes}>
-            {props.children}
-        </button>
+        <div className="button__container">
+            <button className={classes}>
+                {props.children}
+            </button>
+        </div>
     );
 }
 
