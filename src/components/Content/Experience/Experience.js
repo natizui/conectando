@@ -17,9 +17,9 @@ const Experiences = ({ items }) => (
         {
             items.map((item, i) => (
                 <div key={i} id={i}>
-                    <Title value={item.title}  />
-                    <Subtitle value={item.subtitle}  />
-                    <Paragraph value={item.paragraph}  /> 
+                    <Title key={i} value={item.title}  />
+                    <Subtitle key={i} value={item.subtitle}  />
+                    <Paragraph key={i} value={item.paragraph}  /> 
                 </div>
             ))
         }
@@ -47,9 +47,9 @@ class Experience extends React.Component {
                     paragraph: 'Pesquisa, abrangendo áreas como estudo do genoma, metagenomas, transcritoma e proteoma.'
                 },
                 {
-                    titulo: 'Bolsista de Iniciação científica (2014 a 2017)',
-                    subtitulo: 'CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico',
-                    paragrafo: 'Pesquisa, abrangendo áreas como estudo do genoma, metagenomas, transcritoma e proteoma.'
+                    title: 'Bolsista de Iniciação científica (2014 a 2017)',
+                    subtitle: 'CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico',
+                    paragraph: 'Pesquisa, abrangendo áreas como estudo do genoma, metagenomas, transcritoma e proteoma.'
                 }
             ]
         }

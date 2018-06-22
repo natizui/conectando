@@ -15,16 +15,13 @@ import './Education.css';
 const Educations = ({ items }) => (
     <div>
         {
-            items.map((item, i) => {
-                
-                return (
+            items.map((item, i) => (
                     <div key={i} id={i}>
                         <Title value={item.title}  />
                         <Subtitle value={item.subtitle}  />
                         <Paragraph value={item.paragraph}  /> 
                     </div>
-                )
-            })
+                ))
         }
     </div>
 );
@@ -50,9 +47,9 @@ class Education extends React.Component {
                     paragraph: 'Curso de bacharelado no qual estuda-se o desenvolvimento de sistemas para as múltiplas plataformas e a construção de soluções computacionais para problemas da sociedade.'
                 },
                 // {
-                //     titulo: 'Mestrado em Bioinformática',
-                //     subtitulo: 'USP - 2018 a atual',
-                //     paragrafo: 'Curso que forma alunos para o trabalho tanto em pesquisa quanto em desenvolvimento e inovação, em situações que demandem conhecimento especializado em biologia e métodos computacionais. '
+                //     title: 'Mestrado em Bioinformática',
+                //     subtitle: 'USP - 2018 a atual',
+                //     paragraph: 'Curso que forma alunos para o trabalho tanto em pesquisa quanto em desenvolvimento e inovação, em situações que demandem conhecimento especializado em biologia e métodos computacionais. '
                 // }
             ]
         }
